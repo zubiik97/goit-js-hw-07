@@ -8,8 +8,7 @@ galleryContainer.addEventListener('click', onImgClick);
 
 // rendered items
 function createGalleryItemsMarkup(items) {
-  return items
-    .map(({ preview, original, description }) => {
+  return items.map(({ preview, original, description }) => {
       return `<div class="gallery__item">
   <a class="gallery__link" href="${original}">
     <img
@@ -26,7 +25,6 @@ function createGalleryItemsMarkup(items) {
 
 
  function onImgClick(e) {
-   e.preventDefault();
 if (e.target.nodeName !== "IMG") return;
 
    const isItemImage = e.target.classList.contains('gallery__image');
